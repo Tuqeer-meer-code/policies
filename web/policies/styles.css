@@ -1,29 +1,31 @@
 :root {
   color-scheme: light dark;
-  --bg: #f7f7f5;
+  --bg: #f5f4f1;
   --surface: #ffffff;
-  --text: #1c1c1e;
-  --muted: #5c5c62;
-  --border: #e2e2e6;
+  --text: #17171a;
+  --muted: #5b5b62;
+  --border: rgba(18, 18, 22, 0.12);
   --link: #0a66c2;
-  --accent: #0a66c2;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --radius: 16px;
+  --accent: #0b66d6;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+  --radius: 18px;
   --max: 920px;
   --pad: 24px;
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --glow: 0 0 0 1px rgba(11, 102, 214, 0.08), 0 18px 45px rgba(11, 102, 214, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f0f10;
-    --surface: #161618;
-    --text: #f2f2f4;
-    --muted: #a6a6ac;
-    --border: #2a2a2e;
-    --link: #6cb6ff;
-    --accent: #6cb6ff;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --bg: #0d0d10;
+    --surface: #151518;
+    --text: #f4f4f6;
+    --muted: #a7a7b0;
+    --border: rgba(255, 255, 255, 0.14);
+    --link: #7ab8ff;
+    --accent: #7ab8ff;
+    --shadow: 0 20px 55px rgba(0, 0, 0, 0.5);
+    --glow: 0 0 0 1px rgba(122, 184, 255, 0.18), 0 20px 50px rgba(122, 184, 255, 0.2);
   }
 }
 
@@ -36,8 +38,10 @@ html, body {
   padding: 0;
   font-family: var(--font);
   color: var(--text);
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(10, 102, 194, 0.08), transparent 60%),
-    radial-gradient(900px 500px at 90% 0%, rgba(10, 102, 194, 0.08), transparent 55%),
+  background:
+    radial-gradient(1200px 700px at 15% -10%, rgba(11, 102, 214, 0.12), transparent 60%),
+    radial-gradient(1000px 650px at 90% 0%, rgba(11, 102, 214, 0.1), transparent 60%),
+    radial-gradient(900px 500px at 40% 110%, rgba(255, 165, 0, 0.08), transparent 55%),
     var(--bg);
   min-height: 100%;
 }
@@ -63,7 +67,7 @@ main {
 }
 
 .header h1 {
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(30px, 3.2vw, 44px);
   margin: 0;
   font-weight: 600;
 }
@@ -73,6 +77,49 @@ main {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.6;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, rgba(11, 102, 214, 0.08), rgba(11, 102, 214, 0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.hero-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
 }
 
 .card {
@@ -99,7 +146,9 @@ main {
   gap: 10px;
   color: inherit;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .app-card h2 {
@@ -117,7 +166,7 @@ main {
 
 .app-card:hover {
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--glow);
   transform: translateY(-2px);
 }
 
@@ -133,6 +182,11 @@ main {
   color: var(--muted);
   font-size: 13px;
   margin-top: 10px;
+}
+
+.meta strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .section {
@@ -161,7 +215,7 @@ main {
   gap: 8px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
   color: var(--accent);
   font-size: 12px;
   letter-spacing: 0.02em;
@@ -191,5 +245,9 @@ main {
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
   }
 }
