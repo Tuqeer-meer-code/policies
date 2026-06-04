@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Proof App Privacy Policy" />
-    <title>Proof App — Privacy Policy</title>
+    <meta name="description" content="PDF Tools — Privacy Policy" />
+    <title>PDF Tools — Privacy Policy</title>
     <link rel="icon" type="image/png" href="../../../icons/fav.png?v=20260205" />
     <link rel="shortcut icon" href="../../../icons/fav.png?v=20260205" />
     <link rel="stylesheet" href="../../styles.css" />
@@ -13,69 +13,99 @@
     <main>
       <header class="header">
         <div class="eyebrow">Privacy Policy</div>
-        <h1>Proof App</h1>
-        <p>Last updated: January 7, 2026</p>
+        <h1>PDF Tools</h1>
+        <p>Last updated: June 4, 2026</p>
       </header>
 
       <section class="card">
+
         <div class="section">
-          <h2>Introduction</h2>
+          <h2>About PDF Tools</h2>
           <p>
-            Proof App is an offline-first mobile application designed to help users capture and
-            organize personal records such as photos, videos, timestamps, and location data for
-            personal reference. We respect your privacy and are committed to protecting your data.
+            PDF Tools is an offline-first application for everyday PDF work and proof creation.
+            It lets you merge, split, compress, rotate, scan, and convert PDFs, as well as create
+            verifiable proof PDFs with signatures, company logos, metadata, and integrity checks —
+            all without requiring an account or sending your core document data to a remote server.
+            PDF Tools is available on Android, iOS, and macOS.
           </p>
         </div>
 
         <div class="section">
-          <h2>Data Collection</h2>
+          <h2>Developer</h2>
           <p>
-            Proof App does not collect or store any personal data on external servers. All data
-            including photos and videos, timestamps, location data, notes, and metadata is stored
-            locally on your device only using encrypted local storage.
+            PDF Tools is developed and maintained by <strong>Tuqeer Khan</strong>.<br />
+            Contact: <a href="mailto:tuqeer.khanzada@icloud.com">tuqeer.khanzada@icloud.com</a>
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Data We Do Not Collect</h2>
+          <p>
+            PDF Tools does not collect, transmit, or store your personal data on external servers.
+            The following are kept entirely on your device:
+          </p>
+          <ul>
+            <li>PDF files and documents you import, generate, or export.</li>
+            <li>Scanned document images and converted image outputs.</li>
+            <li>Proof records, integrity hashes, and associated metadata.</li>
+            <li>Signatures and company logos you add to proofs.</li>
+            <li>Recent file history tracked by the app.</li>
+            <li>App preferences and onboarding state.</li>
+          </ul>
+          <p>
+            All data is stored locally using SQLite and device storage. No user account is
+            required at any point.
           </p>
         </div>
 
         <div class="section">
           <h2>Permissions</h2>
-          <p>The app may request access to:</p>
+          <p>
+            Depending on your platform and the features you use, PDF Tools may request the
+            following device permissions:
+          </p>
           <ul>
-            <li>Camera to capture proof media.</li>
-            <li>Location to attach geographic context.</li>
-            <li>Storage to save proof files locally.</li>
+            <li><strong>Camera</strong> — used on Android and iOS to scan physical documents. Not used on macOS.</li>
+            <li><strong>Location</strong> — used optionally to attach geographic context to proof PDFs when you choose to include it.</li>
+            <li><strong>Storage / File Access</strong> — used to read source files and save generated PDFs, images, and ZIP archives locally.</li>
+            <li><strong>Photo Library</strong> — used on iOS to import images for PDF conversion or proof creation when you choose to pick from your library.</li>
           </ul>
-          <p>These permissions are used only for app functionality and never for tracking.</p>
+          <p>
+            All permissions are requested only when needed for a specific workflow.
+            None are used for tracking, advertising, or profiling.
+          </p>
         </div>
 
         <div class="section">
-          <h2>No Cloud Sync</h2>
+          <h2>Local-First Architecture</h2>
           <ul>
-            <li>Proof App does not require user accounts.</li>
-            <li>Proof App does not sync data to the cloud.</li>
-            <li>Proof App does not upload data to any server.</li>
-            <li>Proof App does not share data with third parties.</li>
+            <li>PDF Tools does not require a user account.</li>
+            <li>PDF Tools does not sync files or documents to any cloud service.</li>
+            <li>PDF Tools does not upload your documents or proof data to any server.</li>
+            <li>PDF Tools does not share your files or metadata with third parties.</li>
           </ul>
-          <p>You remain the sole owner of your data.</p>
+          <p>You are the sole owner of every file and record the app creates or processes.</p>
         </div>
 
         <div class="section">
           <h2>Sharing and Export</h2>
           <p>
-            When you choose to export or share proofs (PDF, image, or video), the data is shared
-            only through your chosen platform (email, messaging apps, etc.). Proof App does not
-            retain or monitor shared content.
+            When you share or export a PDF, image, or ZIP file, the content is delivered
+            through your device's native share sheet to a platform of your choosing — such
+            as email, messaging apps, or cloud storage. PDF Tools does not intercept,
+            retain, or monitor content you choose to share externally.
           </p>
         </div>
 
         <div class="section">
-          <h2>Integrity and Metadata Disclaimer</h2>
+          <h2>Proof Creation and Integrity Disclaimer</h2>
           <p>
-            Proof App adds timestamps, location data, and integrity hashes to help users organize
-            and reference personal records.
+            PDF Tools can embed timestamps, location data, signatures, logos, and integrity
+            hashes into proof PDFs to help you create credible, verifiable personal records.
           </p>
           <p><strong>Important Disclaimer</strong></p>
           <ul>
-            <li>Proofs generated by Proof App are provided for informational and personal reference purposes only.</li>
+            <li>Proofs generated by PDF Tools are provided for informational and personal reference purposes only.</li>
             <li>Proofs do not constitute legal evidence.</li>
             <li>Proofs are not guaranteed to be admissible in legal, judicial, or regulatory proceedings.</li>
             <li>Users are solely responsible for determining the suitability of any exported proof for their specific use case.</li>
@@ -83,35 +113,67 @@
         </div>
 
         <div class="section">
-          <h2>Payments</h2>
+          <h2>Analytics</h2>
           <p>
-            In-app purchases are processed securely by Apple App Store or Google Play Store.
-            Proof App does not collect or store payment information.
+            PDF Tools uses Firebase Analytics to collect anonymized, aggregated usage data
+            such as feature interactions and session counts. This data does not include your
+            files, document content, or any personally identifiable information. It is used
+            solely to understand how features are used and to improve the app.
+          </p>
+          <p>
+            Firebase Analytics is provided by Google LLC. For more information, see
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              Google's Privacy Policy
+            </a>.
           </p>
         </div>
 
         <div class="section">
-          <h2>Children’s Privacy</h2>
-          <p>Proof App is not intended for children under the age of 13.</p>
+          <h2>In-App Purchases</h2>
+          <p>
+            PDF Tools offers optional in-app purchases on Android and iOS, processed securely
+            through the Google Play Store and Apple App Store respectively via RevenueCat.
+            PDF Tools does not collect or store any payment card details or billing information.
+            In-app purchases are not available on macOS.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Children's Privacy</h2>
+          <p>
+            PDF Tools is not directed at children under the age of 13. We do not knowingly
+            collect any information from children. If you believe a child has used the app
+            in a way that raises a privacy concern, please contact us.
+          </p>
         </div>
 
         <div class="section">
           <h2>Changes to This Policy</h2>
           <p>
-            We may update this Privacy Policy from time to time. Changes will be reflected
-            within the app.
+            We may update this Privacy Policy from time to time to reflect changes in the app
+            or applicable law. When we do, the updated date at the top of this page will be
+            revised. Continued use of the app after changes are posted constitutes acceptance
+            of the updated policy.
           </p>
         </div>
 
         <div class="section">
           <h2>Contact</h2>
-          <p>If you have questions about this policy, contact: tuqeer.khanzada@icloud.com</p>
+          <p>
+            If you have questions, concerns, or requests related to this Privacy Policy,
+            please reach out:
+          </p>
+          <p>
+            <strong>Tuqeer Khan</strong><br />
+            <a href="mailto:tuqeer.khanzada@icloud.com">tuqeer.khanzada@icloud.com</a>
+          </p>
         </div>
+
       </section>
 
       <footer class="footer">
-        <div>Contact: tuqeer.khanzada@icloud.com</div>
-        <div>Last updated: January 7, 2026</div>
+        <div>Contact: <a href="mailto:tuqeer.khanzada@icloud.com">tuqeer.khanzada@icloud.com</a></div>
+        <div>Last updated: June 4, 2026</div>
       </footer>
     </main>
   </body>
