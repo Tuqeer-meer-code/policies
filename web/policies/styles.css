@@ -209,6 +209,11 @@ main {
   margin: 8px 0 0;
 }
 
+[dir="rtl"] .section ul {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
